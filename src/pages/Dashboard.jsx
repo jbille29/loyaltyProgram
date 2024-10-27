@@ -57,7 +57,7 @@ const Dashboard = () => {
           <div className={styles.qrSection}>
             <h4>Scan this QR code to track loyalty:</h4>
             <QRCodeSVG
-              value={`http://localhost:3000/loyalty?businessId=${business._id}`}
+              value={`https://loyalty-program-eight.vercel.app/loyalty?businessId=${business._id}`}
               size={128}
               bgColor="#ffffff"
               fgColor="#000000"
