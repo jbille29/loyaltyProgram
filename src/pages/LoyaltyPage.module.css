@@ -21,3 +21,13 @@
     color: #666;
   }
   
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .success {
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
