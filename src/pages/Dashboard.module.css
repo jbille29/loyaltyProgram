@@ -53,4 +53,25 @@
     color: #555;
     margin-bottom: 10px;
   }
+
+  /* src/pages/Dashboard.module.css */
+
+.analytics {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.analytics h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.analytics p {
+  margin: 5px 0;
+  color: #555;
+}
+
   
