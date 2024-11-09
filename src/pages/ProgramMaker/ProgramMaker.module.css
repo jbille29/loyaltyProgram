@@ -1,0 +1,83 @@
+/* RewardsMaker.module.css */
+
+.rewardsMaker {
+    background-color: #f8f9fa; /* Light, neutral background */
+    padding: 2rem;
+    border: 1px solid #ddd; /* Light border for a subtle outline */
+    max-width: 600px;
+    margin: 2rem auto;
+    font-family: Arial, sans-serif;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); /* Softer shadow */
+}
+
+h2 {
+    color: #333; /* Darker, subtle color */
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup {
+    margin-bottom: 1.25rem;
+}
+
+.formGroup label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555; /* Subtle, dark color */
+    margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+    padding: 0.75rem;
+    border: 1px solid #ddd; /* Light border */
+    font-size: 1rem;
+    color: #333;
+    background-color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); /* Soft inset shadow */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 4rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #007bff; /* Bootstrap-style blue */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    display: block;
+    margin: 1rem auto 0;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+}
+
+button:active {
+    background-color: #004494; /* Even darker blue for active state */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888; /* Subtle placeholder color */
+}

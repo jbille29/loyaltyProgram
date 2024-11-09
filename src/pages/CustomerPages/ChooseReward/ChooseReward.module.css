@@ -1,0 +1,75 @@
+/* SelectReward.module.css */
+
+.selectReward {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .rewardsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .rewardItem {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .rewardContent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rewardItem h3 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin: 0 0 10px;
+  }
+  
+  .selectButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .selectButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .progress {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  

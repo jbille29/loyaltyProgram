@@ -1,0 +1,74 @@
+/* BusinessInfo.module.css */
+
+.businessInfoCard {
+    background-color: #ffffff; /* White background for card */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
+    font-family: Arial, sans-serif;
+    transition: box-shadow 0.3s ease;
+    width: 100%; /* Full width within Dashboard */
+  }
+  
+  .businessInfoCard:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+  }
+  
+  .businessName {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333333; /* Dark grey for contrast */
+    margin-bottom: 15px;
+  }
+  
+  .infoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0; /* Light border for separation */
+  }
+  
+  .infoRow label {
+    font-weight: 600;
+    color: #555555; /* Medium grey for label text */
+  }
+  
+  .infoRow span {
+    color: #777777; /* Slightly lighter grey for content */
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .actionButton {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .editButton {
+    background-color: #007bff; /* Bootstrap-like primary blue */
+    color: #ffffff;
+  }
+  
+  .editButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .upgradeButton {
+    background-color: #28a745; /* Bootstrap-like success green */
+    color: #ffffff;
+  }
+  
+  .upgradeButton:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  

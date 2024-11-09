@@ -1,0 +1,99 @@
+/* RewardsPrograms.module.css */
+
+.rewardsCard {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    width: 100%;
+  }
+  
+  .rewardsCard h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .newProgramButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .newProgramButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .rewardsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .rewardItem {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+  }
+  
+  .rewardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .rewardHeader h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .status {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #000;
+  }
+  
+  .status.active {
+    background-color: #28a745; /* Green for Active */
+  }
+  
+  .status.upcoming {
+    background-color: #ffc107; /* Yellow for Upcoming */
+  }
+  
+  .status.expired {
+    background-color: #dc3545; /* Red for Expired */
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .actionButton {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actionButton:hover {
+    background-color: #e0e0e0;
+  }
+  

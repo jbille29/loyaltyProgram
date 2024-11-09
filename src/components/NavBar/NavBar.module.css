@@ -1,0 +1,28 @@
+/* src/components/NavBar/NavBar.module.css */
+
+.navContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navLink {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navLink:hover {
+    background-color: #4CAF50;
+    transform: translateY(-2px);
+}
+
+.navLink:active {
+    transform: translateY(0);
+}

@@ -5,6 +5,7 @@ import api from '../services/api';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './LoyaltyPage.module.css';
 
+/* Purpose: Customers access this page after scanning a QR code to automatically track points at that business. Info is stored in cookies.*/
 const LoyaltyPage = () => {
   const { customerId: urlCustomerId } = useParams();
   const [searchParams] = useSearchParams();
