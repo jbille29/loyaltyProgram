@@ -12,7 +12,7 @@ const ProgramMaker = () => {
     description: '',
     startDate: '',
     endDate: '',
-    punchesNeeded: 0,
+    punchesNeeded: 10,
     reward: '',
   });
   const [feedback, setFeedback] = useState(null);
@@ -29,6 +29,18 @@ const ProgramMaker = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Date validation
+    const today = new Date().toISOString().split("T")[0];
+    if (formData.startDate < today) {
+      setFeedback("Start date cannot be in the past.");
+      return;
+    }
+    if (formData.endDate <= formData.startDate) {
+      setFeedback("End date must be after the start date.");
+      return;
+    }
+    
     try {
       await createPunchCard({
         name: formData.name,
@@ -47,6 +59,8 @@ const ProgramMaker = () => {
         punchesNeeded: 0,
         reward: '',
       });
+      // Redirect to dashboard
+      navigate('/dashboard');
     } catch (error) {
       console.error('Error creating punch card:', error);
       setFeedback('Failed to create punch card. Please try again.');
@@ -65,7 +79,7 @@ const ProgramMaker = () => {
             id="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Enter reward name"
+             placeholder="e.g., Loyalty Reward for 10th Visit"
             required
           />
         </div>
