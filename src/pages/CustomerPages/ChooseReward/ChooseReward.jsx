@@ -53,7 +53,7 @@ const ChooseReward = () => {
       <h1>Rewards at {businessName}</h1>
       
       <section className={styles.section}>
-        <h2>Current Perks from {businessName}</h2>
+        <h4>Current Perks from {businessName}</h4>
         <ul className={styles.rewardsList}>
           {activeRewards.length > 0 ? (
             activeRewards.map((reward) => (
@@ -77,7 +77,7 @@ const ChooseReward = () => {
       </section>
 
       <section className={styles.section}>
-        <h2>More Ways to Earn</h2>
+        <h4>More Ways to Earn</h4>
         <ul className={styles.rewardsList}>
           {otherRewards.length > 0 ? (
             otherRewards.map((reward) => (

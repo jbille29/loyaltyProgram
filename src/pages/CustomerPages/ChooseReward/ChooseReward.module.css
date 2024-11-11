@@ -19,6 +19,8 @@ h1, h2 {
 
 h1 {
   font-size: 2rem;
+  
+  
 }
 
 h2 {
@@ -28,14 +30,17 @@ h2 {
 
 /* Section Styling */
 .section {
+  
   width: 100%; /* Full width of container */
   margin-bottom: 30px;
 }
 
-.section h2 {
+.section h4 {
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 400;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 /* Rewards List Styling */
@@ -67,6 +72,7 @@ h2 {
 .rewardItem h3 {
   font-size: 2rem;
   margin: 0;
+  font-weight: 400;
 }
 
 .selectButton {

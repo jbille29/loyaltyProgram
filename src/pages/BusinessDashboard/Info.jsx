@@ -5,9 +5,6 @@ const Info = () => {
   return (
     <div className={styles.businessInfoCard}>
       {/* Business Name */}
-      <div className={styles.infoRow}>
-        <h2 className={styles.businessName}>My Business</h2>
-      </div>
 
       {/* Contact Information */}
       <div className={styles.infoRow}>
