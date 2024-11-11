@@ -44,7 +44,7 @@ const ProgramMaker = () => {
     try {
       await createPunchCard({
         name: formData.name,
-        rewardDescription: formData.reward,
+        description: formData.reward,
         punchesNeeded: parseInt(formData.punchesNeeded),
         startDate: formData.startDate,
         endDate: formData.endDate,

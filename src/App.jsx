@@ -12,41 +12,44 @@ import NavBar from './components/NavBar/NavBar';
 import CustomerLoyaltyOverview from './pages/CustomerLoyaltyOverview/CustomerLoyaltyOverview'
 import ChooseReward from './pages/CustomerPages/ChooseReward/ChooseReward'
 import ProgramMaker from './pages/ProgramMaker/ProgramMaker'
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} /> 
-        <Route path="/login" element={<Login />} />
-        
-        <Route path="/loyalty" element={<LoyaltyRedirect />} />
-        <Route path="/loyalty/:businessId" element={<LoyaltyPage />} />
-        <Route path="/loyalty/me" element={<CustomerLoyaltyOverview />} />
+    <ThemeProvider>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} /> 
+          <Route path="/login" element={<Login />} />
+          
+          <Route path="/loyalty" element={<LoyaltyRedirect />} />
+          <Route path="/loyalty/:businessId" element={<LoyaltyPage />} />
+          <Route path="/loyalty/me" element={<CustomerLoyaltyOverview />} />
 
-        <Route path="/chooseReward" element={<ChooseReward />} />
+          <Route path="/chooseReward" element={<ChooseReward />} />
 
-        <Route
-          path="/dashboard"
-          element={
-            <PrivateRoute>
-              <Dashboard />
-            </PrivateRoute>
-          }
-        />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          />
 
-        <Route
-          path="/programMaker"
-          element={
-            <PrivateRoute>
-              <ProgramMaker />
-            </PrivateRoute>
-          }
-        />
-      </Routes>
-    </Router>
+          <Route
+            path="/programMaker"
+            element={
+              <PrivateRoute>
+                <ProgramMaker />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -4,8 +4,6 @@ import styles from './Analytics.module.css';
 const Analytics = () => {
   return (
     <div className={styles.analyticsCard}>
-      <h2>Analytics Overview</h2>
-
       <div className={styles.analyticsGrid}>
         {/* Summary Cards */}
         <div className={styles.summaryCard}>
@@ -18,7 +16,7 @@ const Analytics = () => {
         </div>
         <div className={styles.summaryCard}>
           <h3>Customer Participation</h3>
-          <p>92 Customers</p>
+          <p>92</p>
         </div>
       </div>
 

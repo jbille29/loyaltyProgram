@@ -8,20 +8,20 @@ const ChooseReward = () => {
   const [activeRewards, setActiveRewards] = useState([]);
   const [otherRewards, setOtherRewards] = useState([]);
 
-  // Get business id
   const businessId = "672a72e70f185f026a611789";
 
-
-  // Pull data from API
   const { data: punches, error, isLoading } = useGetAllPunchCardsQuery(businessId);
 
+   // Function to generate a random vibrant color
+   const getVibrantColor = () => {
+    const hue = Math.floor(Math.random() * 360);
+    return `hsl(${hue}, 70%, 85%)`; // 70% saturation, 85% lightness for vibrancy
+  };
+
   useEffect(() => {
-    // Fetch local storage data
     const savedPunchCards = JSON.parse(localStorage.getItem("punchCards")) || [];
 
-    // Only proceed if punches data is available
     if (punches) {
-      // Combine API and local storage data
       const combined = punches.map((punchCard) => {
         const localCard = savedPunchCards.find(
           (card) => card.businessId === punchCard.businessId && card.punchCardId === punchCard._id
@@ -32,7 +32,6 @@ const ChooseReward = () => {
         };
       });
 
-      // Separate active and other rewards
       const active = combined.filter(
         (card) => card.status === "active" && card.punchesCollected < card.punchesNeeded
       );
@@ -40,12 +39,11 @@ const ChooseReward = () => {
         (card) => card.status === "active" || card.punchesCollected === 0
       );
 
-      // Update local state
       setCombinedData(combined);
       setActiveRewards(active);
       setOtherRewards(other);
     }
-  }, [punches]); // Only re-run when `punches` changes
+  }, [punches]);
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -54,20 +52,22 @@ const ChooseReward = () => {
     <div className={styles.selectReward}>
       <h1>Rewards at {businessName}</h1>
       
-      {/* Active Rewards Section */}
       <section className={styles.section}>
         <h2>Current Perks from {businessName}</h2>
         <ul className={styles.rewardsList}>
           {activeRewards.length > 0 ? (
             activeRewards.map((reward) => (
-              <li key={reward._id} className={styles.rewardItem}>
+              <li key={reward._id} className={styles.rewardItem} style={{ backgroundColor: getVibrantColor() }}>
                 <div className={styles.rewardContent}>
                   <h3>{reward.name}</h3>
-                  <button className={styles.selectButton}>Select This Reward</button>
+                  <p className={styles.rewardDescription}>{reward.description}</p>
                 </div>
-                <span className={styles.progress}>
-                  {reward.punchesCollected}/{reward.punchesNeeded}
-                </span>
+                <div className={styles.rewardActions}>
+                  <span className={styles.progress}>
+                    {reward.punchesCollected}/{reward.punchesNeeded}
+                  </span>
+                  {/*<button className={styles.selectButton}>Select This Reward</button>*/}
+                </div>
               </li>
             ))
           ) : (
@@ -76,20 +76,22 @@ const ChooseReward = () => {
         </ul>
       </section>
 
-      {/* Other Rewards Section */}
       <section className={styles.section}>
         <h2>More Ways to Earn</h2>
         <ul className={styles.rewardsList}>
           {otherRewards.length > 0 ? (
             otherRewards.map((reward) => (
-              <li key={reward._id} className={styles.rewardItem}>
+              <li key={reward._id} className={styles.rewardItem} style={{ backgroundColor: getVibrantColor() }}>
                 <div className={styles.rewardContent}>
                   <h3>{reward.name}</h3>
-                  <button className={styles.selectButton}>Start This Reward</button>
+                  <p className={styles.rewardDescription}>{reward.description}</p>
                 </div>
-                <span className={styles.progress}>
-                  {reward.punchesCollected}/{reward.punchesNeeded}
-                </span>
+                <div className={styles.rewardActions}>
+                  <span className={styles.progress}>
+                    {reward.punchesCollected}/{reward.punchesNeeded}
+                  </span>
+                  {/*<button className={styles.selectButton}>Start This Reward</button>*/}
+                </div>
               </li>
             ))
           ) : (

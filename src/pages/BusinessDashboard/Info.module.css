@@ -1,9 +1,9 @@
 /* BusinessInfo.module.css */
 
 .businessInfoCard {
-    background-color: #ffffff; /* White background for card */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
+  background-color: var(--secondary-background-color);
+  padding: 20px;
+  border-radius: var(--card-br);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
     font-family: Arial, sans-serif;
     transition: box-shadow 0.3s ease;

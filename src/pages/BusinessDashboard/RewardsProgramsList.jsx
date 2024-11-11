@@ -8,13 +8,12 @@ const RewardsProgramsList = () => {
   const navigate = useNavigate();
   const businessId = useSelector((state) => state.auth.businessId);
   const { data: punchCards, error, isLoading } = useGetAllPunchCardsQuery(businessId);
-
+  console.log(punchCards)
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error loading rewards programs.</p>;
 
   return (
     <div className={styles.rewardsCard}>
-      <h2>Rewards Programs</h2>
 
       {/* Button to Create a New Program */}
       <button 
@@ -28,17 +27,30 @@ const RewardsProgramsList = () => {
       <ul className={styles.rewardsList}>
         {punchCards.map((card) => (
           <li key={card._id} className={styles.rewardItem}>
+          <div className={styles.leftColumn}>
             <div className={styles.rewardHeader}>
-              <h3>{card.name}</h3>
-              <span className={styles.status}>{card.status || 'Active'}</span>
+              <p>{card.name}</p>
             </div>
+            <p style={{ fontSize: "1rem" }}>{card.description}</p>
             <p>Punches Needed: {card.punchesNeeded} | Expires: {new Date(card.endDate).toLocaleDateString()}</p>
+          </div>
+        
+          <div className={styles.rightColumn}>
+            <span className={styles.status}>{card.status || 'Active'}</span>
             <div className={styles.actions}>
-              <button className={styles.actionButton}>Edit Program</button>
-              <button className={styles.actionButton}>Duplicate Program</button>
-              <button className={styles.actionButton}>Archive Program</button>
+              <button className={styles.actionButton} aria-label="Edit Program">
+                <i className="fas fa-edit"></i>
+              </button>
+              <button className={styles.actionButton} aria-label="Duplicate Program">
+                <i className="fas fa-copy"></i>
+              </button>
+              <button className={styles.actionButton} aria-label="Archive Program">
+                <i className="fas fa-archive"></i>
+              </button>
             </div>
-          </li>
+          </div>
+        </li>
+        
         ))}
       </ul>
     </div>

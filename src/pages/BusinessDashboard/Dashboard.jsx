@@ -20,11 +20,11 @@ const Dashboard = () => {
     skip: !businessId,
   });
 
-  const rewardPageUrl = `${window.location.origin}/rewards?businessId=${businessId}`;
+  const rewardPageUrl = `https://loyalty-program-eight.vercel.app/chooseReward?businessId=${businessId}`;
 
   if (isBusinessLoading) return <p>Loading...</p>;
   if (businessError) return <p>Error loading business info</p>;
-  console.log(business)
+  
   return (
     <div className={styles.dashboard}>
       {business ? (
@@ -34,6 +34,13 @@ const Dashboard = () => {
             <h1>Welcome, {business.name || "Business Owner"}!</h1>
           </div>
 
+          {/* Analytics, Business Info, and Rewards Programs Sections */}
+          <h4>Analytics</h4>
+          <Analytics />
+          <h4>Rewards</h4>
+          <RewardsPrograms />
+          <h4>Information</h4>
+          <Info />
           <section style={{ textAlign: "center", marginTop: "50px" }}>
             <h1>Scan this QR Code</h1>
             <p>Scan the QR code below to access rewards for your business.</p>
@@ -41,10 +48,6 @@ const Dashboard = () => {
             <p>Business ID: {businessId}</p>
           </section>
         
-          {/* Analytics, Business Info, and Rewards Programs Sections */}
-          <Analytics />
-          <RewardsPrograms />
-          <Info />
         </>
       ) : (
         <p>No business information available. Please check your settings or contact support.</p>

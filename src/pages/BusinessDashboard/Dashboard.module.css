@@ -22,6 +22,12 @@
   margin: 0;
 }
 
+h4 {
+  align-self: flex-start;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
 .analyticsCard,
 .businessInfoCard,
 .rewardsCard {

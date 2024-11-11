@@ -3,7 +3,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -49,5 +48,39 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+
+
+/* LIGHT MODE */
+/* Default (Light Mode) */
+:root {
+  /* COLORS */
+  --background-color: #eaf6fa;
+  --secondary-background-color: #fff;
+  --text-color: #000000;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+
+  /* CARDS */
+  --card-br: 45px;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --background-color: #232531;
+  --secondary-background-color: #232531;
+  --text-color: #ffffff;
+  --primary-color: #0d6efd;
+  --secondary-color: #adb5bd;
+}
+/*#333645*/
+
+/* Apply variables globally */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
 
 

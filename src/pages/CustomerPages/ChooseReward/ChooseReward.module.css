@@ -1,75 +1,105 @@
-/* SelectReward.module.css */
-
+/* Overall Layout */
 .selectReward {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .section {
-    margin-bottom: 30px;
-  }
-  
-  .section h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .rewardsList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .rewardItem {
-    background-color: #ffffff;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .rewardContent {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .rewardItem h3 {
-    font-size: 1.2rem;
-    color: #007bff;
-    margin: 0 0 10px;
-  }
-  
-  .selectButton {
-    background-color: #007bff;
-    color: #fff;
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .selectButton:hover {
-    background-color: #0056b3;
-  }
-  
-  .progress {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* Center-align content for consistency with Dashboard */
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  align-self: flex-start;
+}
+
+/* Section Styling */
+.section {
+  width: 100%; /* Full width of container */
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* Rewards List Styling */
+.rewardsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reward Item Styling */
+.rewardItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.rewardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rewardItem h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.selectButton {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.selectButton:hover {
+  background-color: #0056b3;
+}
+
+/* New Styles for Reward Actions Section */
+.rewardActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.progress {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+/* Description Styling */
+.rewardDescription {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
